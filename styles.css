@@ -1,0 +1,27 @@
+.container {
+  width: 700px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 10px;
+}
+
+.poster {
+  max-width: 200px;
+  max-height: 350px;
+  //filter: grayscale(100%);
+}
+
+.infosection {
+  flex-grow: 1;
+  padding: 15px;
+}
+
+body {
+    background-color: lightblue;
+}
+
+ul {
+	//text-align: center;
+}
