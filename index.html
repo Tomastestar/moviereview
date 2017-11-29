@@ -8,7 +8,8 @@
   <title>My awesome movie review site</title>
 </head>
 <body ng-app="reviewApp">
-  <div class="container">
+  <div ng-controller="reviewController" class="container">
+      {{message}}
     <div>
         <img class="poster" src="">
     </div>
