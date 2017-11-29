@@ -31,9 +31,11 @@ for(let i=1; i<=5; i++){
 renderMovie(movieData);
 */
 
-let $ = require("jquery");
+// let $ = require("jquery");
+import * as $ from "jquery";
 
-let reviewData = require("./data");
+import {Inception} from "./data";
+// let reviewData = require("./data");
 
 function renderMovie(data){
   $(".infosection h1").text(data.title);
@@ -59,4 +61,4 @@ $(".stars").on("click", "span", function(e){
   changeStarRating(rating);
 });
 
-renderMovie(reviewData.inception);
+renderMovie(Inception);
