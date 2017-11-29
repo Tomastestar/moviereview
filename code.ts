@@ -35,9 +35,11 @@ renderMovie(movieData);
 import * as $ from "jquery";
 
 import {Inception} from "./data";
+
+import { Review } from "./interfaces";
 // let reviewData = require("./data");
 
-function renderMovie(data){
+function renderMovie(data: Review){
   $(".infosection h1").text(data.title);
   $(".infosection p").text(data.review);
   $(".poster").attr("src", data.imgUrl);
@@ -55,10 +57,17 @@ function changeStarRating(rating){
   }
 }
 
-$(".stars").on("click", "span", function(e){
+
+$(".stars").on("click", "span", (e) =>{
   let star = $(e.target);
   let rating = parseInt(star.attr("data-rating-id"));
   changeStarRating(rating);
 });
 
 renderMovie(Inception);
+
+/*
+ui.rating.on("click", "span", (e) => {
+  // truncated
+});
+*/
