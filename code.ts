@@ -32,12 +32,23 @@ renderMovie(movieData);
 */
 
 // let $ = require("jquery");
+import * as angular from "angular";
+
+let app = angular.module("reviewApp", []);
+
+app.controller("reviewController", function($scope){
+  $scope.message = "Hello from Angular!";
+});
+
 import * as $ from "jquery";
+
 
 import {Inception} from "./data";
 
 import { Review } from "./interfaces";
 // let reviewData = require("./data");
+
+
 
 function renderMovie(data: Review){
   $(".infosection h1").text(data.title);
